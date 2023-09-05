@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View,ImageBackground, Text, Button, StyleSheet } from 'react-native';
 
 const QuizScreen = ({ route, navigation }) => {
   const { questions } = route.params;
@@ -27,7 +27,7 @@ const QuizScreen = ({ route, navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <ImageBackground source={require('../assets/bged.jpg')} style={styles.container}>
       {currentQuestionIndex < questions.length ? (
         <View>
           <Text style={styles.question}>{questions[currentQuestionIndex].question}</Text>
@@ -42,7 +42,7 @@ const QuizScreen = ({ route, navigation }) => {
       ) : (
         <Text style={styles.completed}>Quiz completed!</Text>
       )}
-    </View>
+    </ImageBackground>
   );
 };
 

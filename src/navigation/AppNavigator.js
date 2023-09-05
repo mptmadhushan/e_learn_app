@@ -12,6 +12,7 @@ import TestChart from '../screens/chart';
 import {TapGestureHandler} from 'react-native-gesture-handler';
 import {View, Text, Image} from 'react-native';
 import QuizScreen from '../screens/QuizScreen';
+import Leaderboard from '../screens/Leaderboard';
 
 // import backimg from '../assets/images/arrow-back-12-512.png';
 const Stack = createStackNavigator();
@@ -128,9 +129,9 @@ function MainStackNavigator() {
           component={Home}
         />
         <Stack.Screen
-          name="Register"
+          name="Leaderboard"
           options={{headerShown: false}}
-          component={Register}
+          component={Leaderboard}
         />
         <Stack.Screen
           name="OnBoard"

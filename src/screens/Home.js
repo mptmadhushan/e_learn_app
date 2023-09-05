@@ -59,6 +59,16 @@ export default function Home({navigation}) {
               <Text style={styles.text001}>Quiz</Text>
             </View>
           </TouchableOpacity>
+          <View style={styles.rowNorm}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('Leaderboard')}
+              style={styles.slide1}>
+              <View style={styles.centerFlex}>
+                <Icon name="database" size={30} color={COLORS.white} />
+                <Text style={styles.text001}>Leaderboard</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </ImageBackground>
